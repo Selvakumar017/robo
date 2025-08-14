@@ -1,0 +1,182 @@
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4, #a1c4fd);
+      background-size: 400% 400%;
+      animation: bgMove 15s ease infinite;
+      font-family: sans-serif;
+      text-align: center;
+      color: #333;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: box;
+  animation-duration: 1s;
+  animation-iteration-count: 1000;
+  animation-delay:3s;
+
+}
+@keyframes box {
+  0% {background-color: red;}
+  10%{background-color: yellow;}
+  20%{background-color: green;}
+  30%{background-color: orange;}
+  40%{background-color: black;}
+  50%{background-color: pink;}
+  60%{background-color: white;}
+  70%{background-color: purple;}
+  80%{background-color: grey;}
+  90%{background-color: blue;}
+  100%{background-color:brown;}
+}
+
+    h2 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+    }
+
+    #robot {
+      width: 200px;
+      margin: 40px auto;
+      position: relative;
+      animation: robotBounce 2s ease-in-out infinite;
+    }
+
+    @keyframes robotBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    #face {
+      width: 180px;
+      height: 150px;
+      background: #ffeaa7;
+      border-radius: 20px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    #eyes {
+      display: flex;
+      justify-content: space-around;
+      padding: 30px 20px 10px;
+    }
+
+    #eyes1, #eyes2 {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border: 3px solid #444;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    #iris1, #iris2 {
+      width: 15px;
+      height: 15px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      animation: irisMove 2s infinite;
+    }
+
+    @keyframes irisMove {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(5px, 2px); }
+    }
+
+    #mouth {
+      width: 80px;
+      height: 25px;
+      background: #333;
+      border-radius: 20px;
+      margin: 10px auto;
+      position: relative;
+    }
+
+    #tongue {
+      width: 30px;
+      height: 15px;
+      background: #ff7675;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #hand1, #hand2 {
+      width: 20px;
+      height: 100px;
+      background: #a29bfe;
+      position: absolute;
+      top: 180px;
+      border-radius: 90px;
+      transform-origin: top center;
+    }
+
+    #hand1 {
+      left: -0px;
+      animation: swingLeft 2s infinite;
+    }
+
+    #hand2 {
+      right: -0px;
+      animation: swingRight 2s infinite;
+    }
+
+    @keyframes swingLeft {
+      0%, 100% { transform: rotate(25deg); }
+      50% { transform: rotate(-25deg); }
+    }
+
+    @keyframes swingRight {
+      0%, 100% { transform: rotate(-25deg); }
+      50% { transform: rotate(25deg); }
+    }
+
+    #stomach {
+      width: 120px;
+      height: 90px;
+      background: #74b9ff;
+      margin: 15px auto;
+      border-radius: 20px;
+      animation: stomachPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes stomachPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    #leg1, #leg2 {
+      width: 25px;
+      height: 80px;
+      background: #636e72;
+      border-radius: 15px;
+      display: inline-block;
+      margin: 10px;
+      animation: legDance 2s ease-in-out infinite;
+    }
+
+    #leg2 {
+      animation-delay: 1s;
+    }
+
+    @keyframes legDance {
+      0% { transform: rotate(10deg); }
+      50% { transform: rotate(-10deg); }
+      100% { transform: rotate(10deg); }
+    }
+
